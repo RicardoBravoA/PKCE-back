@@ -17,6 +17,5 @@ function errorData(response) {
 
 module.exports = {
 	serverError,
-	showError,
-	showParameterError
+	errorData
 }
