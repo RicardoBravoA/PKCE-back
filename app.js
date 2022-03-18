@@ -2,7 +2,7 @@
 
 var express = require('express')
 
-var app = express();
+var app = express()
 const morgan = require('morgan')
 
 app.set('port', process.env.PORT || 3000)
@@ -21,4 +21,4 @@ var movieRoute = require('./route/movie.route')
 app.use('/api/', movieRoute)
 
 //module conversion
-module.exports = app;
+module.exports = app
