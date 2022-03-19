@@ -7,9 +7,7 @@ var ErrorContract = require('../contract/error.contract')
 
 function list(request, response) {
     if (Validate.validate(request)) {
-        response.status(Constant.CODE_200).send({
-            Data
-        })
+        response.status(Constant.CODE_200).send(Data)
     } else {
         ErrorContract.errorData(response)
     }

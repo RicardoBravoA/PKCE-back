@@ -2,7 +2,7 @@
 
 function validate(request) {
     const verb = request.method.toLowerCase()
-    const body = JSON.stringify(request.body)
+    const body = JSON.stringify(request.body).replace(/"/g, "")
 
     var data = request.originalUrl + verb + body
     console.log(data)
@@ -16,6 +16,7 @@ function validate(request) {
     console.log(text)
 
     const requestId = request.headers['request-id']
+    console.log(requestId)
 
     return base64data == requestId
 }

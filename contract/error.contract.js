@@ -9,13 +9,18 @@ function serverError(response) {
 	})
 }
 
-function errorData(response) {
-	response.status(Constant.CODE_403).send({
-		ErrorModel
+function showError(response, id, message) {
+	response.status(Constant.CODE_500).send({
+		id: id, message: message
 	})
+}
+
+function errorData(response) {
+	response.status(Constant.CODE_403).send(ErrorModel)
 }
 
 module.exports = {
 	serverError,
+	showError,
 	errorData
 }
