@@ -5,12 +5,15 @@ function validate(request) {
     const body = JSON.stringify(request.body)
 
     var data = request.originalUrl + verb + body
+    console.log(data)
 
     let buff = new Buffer.from(data)
     let base64data = buff.toString('base64')
+    console.log(base64data)
 
     let buffDecode = new Buffer.from(base64data, 'base64')
     let text = buffDecode.toString('ascii')
+    console.log(text)
 
     const requestId = request.headers['request-id']
 

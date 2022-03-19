@@ -5,6 +5,6 @@ var controller = require('../controller/transaction.controller')
 
 var api = express.Router()
 
-api.get('/transaction', controller.pay)
+api.post('/transaction', controller.pay)
 
 module.exports = api
