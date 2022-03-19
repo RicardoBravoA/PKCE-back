@@ -13,12 +13,14 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
 //load routes
-var movieRoute = require('./route/movie.route')
+const movieRoute = require('./route/movie.route')
+const transactionRoute = require('./route/transaction.route')
 
 /* routes */
 
 //base route
 app.use('/api/', movieRoute)
+app.use('/api/', transactionRoute)
 
 //module conversion
 module.exports = app
